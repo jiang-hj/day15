@@ -1,0 +1,711 @@
+body, input, textarea { font: 12px/1.5  "Aril"; }
+body,ul,dl,dd,dt,h1,h5,h6 {margin: 0; padding: 0;}
+body,div,ul {box-sizing: border-box;}
+li {
+    list-style-type: none;
+}
+input,textarea {outline:none} /*取消高亮*/
+input[type="button"] {cursor: pointer;}/*按钮手形*/
+
+html {    
+    height: 100%;
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+body {    
+    height: 100%;
+    background: url(../img/background.png) repeat-y;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*===============左侧================*/
+.sidebar {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    text-align: center;    
+}
+
+.sidebar ul {    
+    text-align: center;
+}
+
+.sidebar li {    
+    list-style-type: none;
+    width: 100px;
+    position: relative;
+}
+
+.sidebar input:hover {
+    opacity: 0.7;
+}/*按钮hover变色*/
+
+.sidebar input:focus + span {
+    background:url(../img/active.png) no-repeat 0 0;
+}/*focus 出亮点*/
+
+.sidebar input {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;      
+    cursor: pointer; 
+    margin-top: 20px;    
+}/*.sidebar下所有input均为button*/
+
+.sidebar input + span {
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+.item1 {
+    background: url(../img/Item.png) no-repeat 0 -60px;
+}
+
+.item2 {
+    background: url(../img/Item.png) no-repeat 0 -120px;
+}
+
+.item3 {
+    background: url(../img/Item.png) no-repeat 0 -180px;
+}
+
+.sidebar .add_item {
+    background: none;
+    border:#2d3848 3px solid;
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: 300;
+    color: #2d3848;
+}
+
+.sidebar .grid,
+.sidebar .setting {
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+
+}
+
+.sidebar .grid {
+    background: url(../img/Tools.png) no-repeat -110px 0;
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+}
+
+.sidebar .setting {
+    background: url(../img/Tools.png) no-repeat -126px 0;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+}
+/*===============左侧end==============*/
+
+/*===============导航=================*/
+.nav {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 100px;   
+    /* background-color: #222c3c; */
+}
+
+.menu_wrap {
+    height: 85%;
+    overflow: hidden;
+}
+
+.nav dl {
+    width: 190px;
+    margin-bottom: 5px;   
+    margin-left: 30px;
+    border-top: #2d3848 1px solid;
+}
+
+.nav .menu {
+    border-top: none;
+}/*第一个menu没有上边框*/
+
+.nav dt {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #5b6779;
+}
+
+.nav input[value]:hover {
+    color: #eeeeee;    
+}
+
+.nav .setting:hover {
+    opacity: 0.7;
+}
+
+.nav input:focus {
+    color: #ffffff;
+}
+
+.nav input:focus ~ .act {
+    background: url(../img/active.png) no-repeat 0 0;    
+}
+
+.nav input:focus ~ .not {
+    display: none;
+}/*^^交互^^*/
+
+.nav input {
+    width: 150px;
+    padding: 0;
+    margin-bottom: 16px;
+    background: none;
+    border: none;
+    color: #b7c0cd;
+    font-size: 14px;
+    text-align: left;
+}
+
+.nav .not {
+    position: absolute;
+    right: 30px;
+    width: 32px;
+    height: 24px;    
+    color: #ffffff;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.nav .setting {
+    width: 16px;
+    height: 16px;
+    background: url(../img/Tools.png) no-repeat -126px 0;
+}
+
+.nav input[value="Messages"] ~ .not,
+.nav input[value="Sales"] ~ .not {
+    background: url(../img/Item.png) no-repeat 0 -30px;
+}
+
+.nav input[value*="Integra"] ~ .not {
+    width: 24px;
+    height: 24px;
+    background: url(../img/Item.png) no-repeat 0 0;
+}
+
+.nav .act {
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 20px;    
+}
+
+.goals {
+    width: 190px;
+    height: 70px;
+    padding-top: 10px;
+    background: url(../img/base.png) no-repeat 0 41px;
+    background-color: #222c3c;    
+    position: absolute;
+    left: 30px;
+    bottom: 0px;
+    font-size: 14px;
+    color: #dddddd;
+}
+
+.goals span {
+    float: right
+}
+
+.goals .fill {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    background: url(../img/Item.png) no-repeat 0 -26px;    
+}
+
+/*==============导航end================*/
+
+/*==============右侧===================*/
+.content {
+    margin-left: 350px;
+    height: 100%;  
+    position: relative;
+    padding-top: 150px;
+}/*设置padding-top=150px，使content的高度减小*/
+/*-------------右侧头部-----------*/   
+.header {
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border-bottom: #d9cfcd 1px solid;    
+    z-index: 100;
+}
+
+.content h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5a5f6a;  
+    margin-top: 3px;  
+}
+
+.content h6 {
+    font-size: 14px;
+    font-weight: 600;;
+    color: #b5b5b5;
+    line-height: 16px;
+}
+
+.content p {
+    font-size: 13px;
+    color: #585d68;
+}
+
+.title {
+    height: 80px;
+    border-bottom: #d9cfcd 1px solid; 
+    position: relative;
+}
+
+.title h1 {    
+    margin-left: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 80px;
+    color: #304552;
+}
+
+.title > div {
+    width: 215px;
+    height: 80px;
+    padding-top: 15px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.title img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 15px;    
+}
+
+.title h5 {
+    color: #2399f1;
+}
+
+.title .icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff url(../img/Item.png) no-repeat -36px 4px;
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
+}
+
+.header .title .or {
+    margin: 0;
+    width: 12px; 
+    height: 12px;      
+    position: absolute;
+    right: 10px;
+    top: 34px;     
+    background-color: none;  
+    background: url(../img/Tools.png) no-repeat -128px -16px; 
+    border: none;     
+}
+/*title结束*/
+.header_left {
+    width: 400px;
+    height: 70px;
+    position: absolute;    
+}
+
+.header_left form {
+    box-sizing: border-box;
+    width: 400px;
+    height: 70px;    
+    border-right: #d9cfcd 1px solid;
+    padding-left: 30px;   
+    padding-top: 15px;   
+}
+
+.header_left input[name="search"] {
+    box-sizing: border-box;
+    height: 36px;
+    width: 300px;
+    padding-left: 15px;
+    background: none;
+    border: #d9cfcd 1px solid;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    vertical-align: top;
+}
+
+.header_left input[type="submit"] {
+    box-sizing: border-box;
+    height: 36px;
+    width: 40px;    
+    border: #d9cfcd 1px solid;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    left: -4px;      
+    background: url(../img/search.png) no-repeat 10px 10px;
+    cursor: pointer;    
+}
+
+.header_left input[type="submit"]:hover {
+    background-color: rgba(0, 0, 100, 0.1);
+}
+
+.header_right {
+    height: 70px;;
+    margin-left: 400px;
+    position: relative;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+.header_right .status_icon {
+    border-radius: 50%;
+    background-color: #18b934;
+    height: 8px;
+    width: 8px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.item_box {
+    width: 285px;
+    height: 32px;    
+    position: absolute;
+    right: 20px;
+    top: 20px;    
+}
+
+.edit {
+    float: left;
+}
+
+.turn {
+    float: right;
+}
+
+.pages{
+    width: 78px;
+    float: right;
+    margin: 1px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #56688a;
+    text-align: center;
+    border-left: #d9cfcd 1px solid;
+}
+
+.item_box li {
+    float: left;    
+}
+
+.item_box input {
+    width: 36px;
+    height: 32px;    
+    border: none;
+}
+
+.add {
+    background: url(../img/Tools.png) no-repeat 0 0;
+}
+
+.up {
+    background: url(../img/Tools.png) no-repeat -36px 0;
+}
+
+.item_box .del {
+    width: 37px;
+    background: url(../img/Tools.png) no-repeat -72px 0;
+}
+
+.previous {
+    background: url(../img/Tools.png) no-repeat 0 -32px;
+}
+
+.item_box .next {
+    width: 37px;
+    background: url(../img/Tools.png) no-repeat -36px -32px;
+}
+
+.item_box input:hover {
+    opacity: 0.7;
+}
+
+/*-----------右侧头部end----------*/
+
+/*----------右侧内容部分----------*/
+/*^^^^^^^^^wrap遮挡滚动^^^^^^^^*/
+.wrap_left {
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid #d9cfcd;  
+    float: left;
+    overflow: hidden;
+}/*浮动，高度100%--以content大小计，如果用定位，会以border大小计*/
+
+.wrap_right {
+    height: 100%;
+    position: relative;
+    margin-left: 400px; 
+    padding-bottom: 85px;   
+    overflow: hidden;
+}/*padding-bottom 85px,减小content高度。*/
+/**/
+/*^^^^^^^wrap遮挡滚动end^^^^^^*/
+
+/*^^^^^^^^^^^^^左半^^^^^^^^^^*/
+.list {
+    width: 417px;
+    height: 100%;    
+    overflow-y: auto;    
+}/*滚动条刚好17px*/
+
+.list > div {
+    height: 130px;
+    border-bottom: #d9cfcd 1px solid;
+    position: relative;
+    padding: 15px 20px 0 30px;    
+}
+
+.list input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: none;
+    border: none;
+}
+
+.list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 15px;    
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7f8fa4;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.mes_nub {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: url(../img/Item.png) no-repeat -5px -30px;
+    margin-top: 15px;
+    margin-left: 20px;
+    float: right;
+    line-height: 24px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+img[src="img/f0002.png"] ~ .mes_nub {
+    display: inline;
+}
+
+img[src="img/f0002.png"] + h5 {
+    color: #2399f1;
+}
+
+img[src="img/f0002.png"] + h5 .status_icon {
+    display: inline;
+}
+
+.list .status_icon {
+    border-radius: 50%;
+    background-color: #18b934;
+    height: 8px;
+    width: 8px;
+    margin-top: 8px;
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+    display: none;
+}
+
+
+
+.list input:hover {
+    background-color: rgba(0, 0, 100, 0.1);
+}
+
+.list input:focus {
+    background: url(../img/highlight.png) no-repeat 0 0;
+}
+
+.list input:focus ~ .mes_nub {
+    display: none;
+}
+
+.list input[type]:focus ~ .name .status_icon {
+    display: inline;
+}
+
+
+/*^^^^^^^^^^^^左半end^^^^^^^^^*/
+
+/*^^^^^^^^^^^^右半^^^^^^^^^^^^*/
+/*++++++消息部分++++++*/
+.message {
+    position: relative;   
+    height: 100%;
+    margin-right: -20px;    
+    overflow-y: auto;
+    
+}/*设置margin-right:-20px,使滚动条显示在wrap之外，大小，以及调整位置*/
+
+.message > div {
+    position: relative;
+    padding: 30px 40px 20px 30px;
+    border-top: #d9cfcd 1px solid;;
+}
+
+.day > span {
+    padding: 12px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    font-size: 14px;
+    line-height: 0px;
+    color: #d9cfcd;
+    transform: translateX(-50%);
+}
+
+.logging > img {
+    float: left;
+    margin-right: 20px;
+}
+
+.message .logging > h5 {
+    color: #585d68;
+}
+
+.day .time {
+    position: static;
+    margin-left: 10px;
+}
+
+.day p {
+    margin-left: 70px;
+}
+
+.message .ago {
+    border: none;
+}
+
+.message .new {
+    border-color: #2399f1;
+}
+
+.new > span {
+    color: #2399f1;
+}
+
+
+.img_wrap {
+    float: left;
+    margin-left: 70px;
+    position: relative;
+}
+
+.img_wrap:first-of-type {
+    margin-right: -55px;
+}
+
+.img_wrap input {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    background: rgba(255, 255, 255, 0.4) url(../img/Open.png) no-repeat 17px 17px;
+    border: none;
+    border-radius: 50%;
+    display: none;
+}
+
+.tue:after {
+    content: "";
+    display: block;    
+    clear: both;
+}
+
+.img_wrap:hover input {
+    display: inline;
+}
+
+.img_wrap input:focus + img {
+    width: 300px;
+}
+
+/*+++++消息部分end+++++*/
+
+/*+++++输入框end+++++*/
+.talk {
+    height: 54px;
+    margin: 10px 30px 0 30px;    
+    border: #d9cfcd 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.talk input[type="button"] {
+    width: 54px;
+    height: 52px;
+    float: left;    
+    vertical-align: top;    
+    border: none;
+    background: url(../img/Tools.png) no-repeat -169px -1px;
+    font-size: 30px;
+    color: #d9cfcd;
+}
+
+.wrap_text {
+    height: 100%;
+    margin-left: 50px;    
+}
+
+.talk textarea {  
+    box-sizing: border-box;  
+    height: 54px;
+    width: calc(100% + 13px);    
+    resize: none;    
+    padding:0 18px;
+    margin-right: -18px;
+    /*设置负margin减box大小*/
+    border: none;
+    font-size: 14px;
+    line-height: 53px;    
+    color: #707070;  
+}

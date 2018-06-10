@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <input type="button" class="item1"><span></span>
+            </li>
+            <li>
+                <input type="button" class="item2"><span></span>
+            </li>
+            <li>
+                <input type="button" class="item3"><span></span>
+            </li>            
+        </ul>
+        <input type="button" value="+" class="add_item">
+        <input type="button" class="grid">
+        <input type="button" class="setting">
+    </div>
+    <!--nav-->
+    <div class="nav">        
+        <dl class="menu">
+            <dt>MENU
+                <input type="button" class="not setting">
+            </dt>
+            <dd>
+                <input type="button" value="Overview">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>
+            <dd>
+                <input type="button" value="Sales">
+                <span class="act"></span>
+                <span class="not">54</span>
+            </dd>            
+            <dd>
+                <input type="button" value="Your Staff">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>            
+            <dd>
+                <input type="button" value="Analytics&nbsp;&amp;&nbsp;Targeting">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>
+            <dd>
+                <input type="button" value="What's New">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>                    
+        </dl>
+        <dl class="products">
+            <dt>YOUR FPODUCTS
+                <input type="button" class="not setting">
+            </dt>
+            <dd>
+                <input type="button" value="Books">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>
+            <dd>
+                <input type="button" value="Tutorials">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>            
+            <dd>
+                <input type="button" value="Stocks">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>            
+            <dd>
+                <input type="button" value="Infographics">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>            
+        </dl>
+        <dl class="products">
+            <dt>DASHBOARD
+                <input type="button" class="not setting">
+            </dt>
+            <dd>
+                <input type="button" value="Messages">
+                <span class="act"></span>
+                <span class="not">21</span>
+            </dd>
+            <dd>
+                <input type="button" value="Connections">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>            
+            <dd>
+                <input type="button" value="Integrations">
+                <span class="act"></span>
+                <span class="not">!</span>
+            </dd>            
+            <dd>
+                <input type="button" value="Account Settings">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>  
+            <dd>
+                <input type="button" value="App Settings">
+                <span class="act"></span>
+                <span class="not"></span>
+            </dd>              
+        </dl>        
+        <!--以上是菜单-->
+        <div class="goals">
+                Monthly Goals
+                <span>/$3200</span>
+                <span>$580</span>
+                <span class="fill"></span>
+            </div>
+    </div>       
+    <!--^^^^^^^^  nav   ^^^^^^^-->
+    <div class="content">
+        <div class="header">
+            <div class="title">
+                <h1>Messages</h1>
+                <div>
+                    <img src="img/f0001.png" alt="头像">
+                    <h5 class="name">Jordan J.</h5>
+                    <h6 class="from">Administrator</h6>
+                    <span class="icon"></span>
+                    <input type="button" class="or">
+                </div>
+            </div>
+            <!--搜索框部分-->
+            <div class="header_left">
+                <form action="javascript:">                    
+                    <input type="search" name="search" placeholder="Search">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <!--按钮部分-->
+            <div class="header_right">
+                <h5>Bessie Berry<span class="status_icon"></span></h5>
+                <div class="item_box">
+                    <ul class="edit">
+                        <li><input type="button" class="add"></li>
+                        <li><input type="button" class="up"></li>
+                        <li><input type="button" class="del"></li>
+                    </ul>
+                    <ul class="turn">
+                        <li><input type="button" class="previous"></li>
+                        <li><input type="button" class="next"></li>
+                    </ul>
+                    <p class="pages"><span>1</span> of <span>28</span></p>
+                </div>
+            </div>
+        </div>
+        <!--wrap 是为了遮.list .message这两块的滚动条，main中的实际宽度会比wrap大-->        
+        <div class="wrap_left">
+            <div class="list">
+                <div>
+                    <input type="button">
+                    <img src="img/f0002.png" alt="头像">
+                    <h5 class="name">Bessie Berry<span class="status_icon"></span></h5>
+                    <h6 class="from">Twitter</h6>
+                    <span class="mes_nub">4</span>
+                    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable...</p>
+                    <span class="time">3m</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0003.png" alt="头像">
+                    <h5 class="name">Victor Weber<span class="status_icon"></span></h5>
+                    <h6 class="from">Adobe</h6>
+                    <span class="mes_nub">3</span>
+                    <p>I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...</p>
+                    <span class="time">8m</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0004.png" alt="头像">
+                    <h5 class="name">Dustin Benson<span class="status_icon"></span></h5>
+                    <h6 class="from">Facebook</h6>
+                    <span class="mes_nub"></span>
+                    <p>If there is anyone who needs an invitation please add yourself in the comments of this post!</p>
+                    <span class="time">Yesterday</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0005.png" alt="头像">
+                    <h5 class="name">Jack Mason<span class="status_icon"></span></h5>
+                    <h6 class="from">Yahoo</h6>
+                    <span class="mes_nub"></span>
+                    <p>BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...</p>
+                    <span class="time">Yeaterday</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0006.png" alt="头像">
+                    <h5 class="name">Stephen Shelton<span class="status_icon"></span></h5>
+                    <h6 class="from">Snapchat</h6>
+                    <span class="mes_nub"></span>
+                    <p>Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...</p>
+                    <span class="time">13 Jun</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0007.png" alt="头像">
+                    <h5 class="name">Sally Willis<span class="status_icon"></span></h5>
+                    <h6 class="from">Twitter</h6>
+                    <span class="mes_nub"></span>
+                    <p>Yes, it's O2: 'internet extreme', which is no longer offered.</p>
+                    <span class="time">12 Jun</span>
+                </div>
+                <div>
+                    <input type="button">
+                    <img src="img/f0008.png" alt="头像">
+                    <h5 class="name">Robert Patton<span class="status_icon"></span></h5>
+                    <h6 class="from">A team</h6>
+                    <p>change my service from this 4Mb plan to their much cheaper 8Mb plan, my speed will dramatically decrease.</p>
+                    <span class="time">9 Jun</span>
+                    <span class="mes_nub"></span>
+                </div>                
+            </div>            
+        </div>
+        <div class="wrap_right">
+            <div class="message">
+                <div class="day ago">
+                    <span></span>
+                    <div class="logging">
+                        <img src="img/f0002.png" alt="头像">
+                        <h5 class="name">Bessie Berry<span class="time">8:31 AM</span></h5>
+                        <p>Hi guys Ive got the O2 package and have really slow internet. A speed check online said i can get 3mbps but it seems more like 0.5 these days, just freezing and taking ages to open pages and open audio files for example. I have decided to switch to the UPC package which offers 10mbps but do you think i will get it?</p>
+                    </div>
+                    <div class="logging">
+                        <img src="img/f0001.png" alt="头像">
+                        <h5 class="name">Jordan Jackson<span class="time">8:31 AM</span></h5>
+                        <p>I have internet for 9 month and nevere could benefit from the full capacity of 5Mbit/s as it is filtered by O2 when it detect traffic on public p2p sharing in my situation all my internet speed slows to 512Kbit/s. I never had 400KB/s on when downloading from p2p public servers like torrent emule etc. I downoad with 500KB/s from private trakers instead. So conlcusion O2 block trafic on p2p connections. I have made hundreds of test in Italy and Sweden and Romania with the same file to doanload with the same setting and same antivirus and just needed to open ports in firewall and forward same ports and the speed was at full capacity in 1 minute. here in 9 month never had this luck.</p>
+                    </div>
+                </div>
+                <div class="day tue">
+                    <span>Tuesday</span>
+                    <div class="logging">
+                        <img src="img/f0002.png" alt="头像">
+                        <h5 class="name">Bessie Berry<span class="time">8:31 AM</span></h5>
+                        <p>Funny comparison. so would the proper antivirus not slow down the internet as much or do you mean a freebie doenst protect the computer from viruses?</p>
+                    </div>
+                    <div class="logging">
+                        <img src="img/f0001.png" alt="头像">
+                        <h5 class="name">Jordan Jackson<span class="time">8:31 AM</span></h5>
+                        <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2, and haven't had any problems. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep track of what I'm doing on it. I max out at about 3 Mb/sec down, and 350 Kb/sec up. Probably because of a noisy telephone line, not because I'm being throttled. When my uploads go over 25 KB/sec (note, bytes, not bits), my download speed suffers. This is expected, as downloads require upload bandwidth as well. </p>
+                        <div class="img_wrap">
+                            <input type="button" class="open">
+                            <img src="img/Photo1.png" alt="照片">
+                        </div>
+                        <div class="img_wrap">
+                            <input type="button" class="open">
+                            <img src="img/Photo2.png" alt="照片">
+                        </div>
+                    </div>
+                </div>
+                <div class="day new">
+                    <span>New Messages</span>
+                    <div class="logging">
+                        <img src="img/f0002.png" alt="头像">
+                        <h5 class="name">Bessie Berry<span class="time">8:31 AM</span></h5>
+                        <p>Funny comparison. so would the proper antivirus not slow down the internet as much or do you mean a freebie doenst protect the computer from viruses?</p>
+                    </div>
+                </div>               
+            </div>
+            <!--聊天框-->  
+            <div class="talk">
+                <input type="button" value="+">
+                <!--wrap_text同样是为了遮滚动条-->
+                <div class="wrap_text">
+                    <textarea name="">Well, kinda both :) but more of that second option, i`ve seen many systems infected and crawling with</textarea>
+                </div>
+            </div> 
+        </div>        
+    </div>
+</body>
+</html>
